@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./CSS-property/SignIn.css";
 import eye from "../images/eye.png";
-import axios from "../../axios-configure";
+import axios from "./axios-configure";
 
 function Signin({ setUser }) {
   const [email, setEmail] = useState("");
