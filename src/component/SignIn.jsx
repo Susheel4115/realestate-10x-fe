@@ -22,7 +22,7 @@ function Signin({ setUser }) {
         `https://realestate-10x-be.herokuapp.com/login/`,
         data,
         {
-          withCredentials: true,
+          "Access-Control-Allow-Credentials": true,
         }
       );
 
