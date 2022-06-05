@@ -1,0 +1,96 @@
+.userData-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+}
+.sidebar-container {
+  width: 16rem;
+  height: 42rem;
+
+  background: #e1f9f4;
+}
+.sidebar-head {
+  height: 44px;
+  width: 75px;
+  margin: 2rem 0 0 5rem;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 44px;
+  color: #1a1b1c;
+}
+.sidbar-text-container {
+  height: 385px;
+  width: 220px;
+  margin-left: 10px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  list-style: none;
+  font-size: 22px;
+  line-height: 35px;
+  color: #2289ff;
+}
+.sidedata {
+  display: flex;
+  margin: 2rem 0 0 2rem;
+}
+img {
+  margin-right: 0;
+}
+img.property {
+  width: 1.5rem;
+}
+
+img.bell {
+  height: 1.5rem;
+  /* width: 24px; */
+}
+
+img.received {
+  height: 1.7rem;
+}
+
+img.sent {
+  height: 1.6rem;
+}
+
+img.views {
+  height: 0.9trm;
+}
+
+img.tariff {
+  height: 1.4rem;
+  margin-top: 0.5rem;
+  margin-left: 2px;
+  /* width: 20px; */
+}
+
+.viwes {
+  /* position: absolute; */
+  left: 25vw;
+  top: 30vh;
+  cursor: pointer;
+}
+
+.imges {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+img.imgs {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+li.sidebar-text {
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+}

@@ -1,0 +1,147 @@
+
+
+.right-side {
+  width: calc(100% - 16rem);
+  left: 320px;
+  background: #f5f5f5;
+  top: 0px;
+  border-radius: 0px;
+}
+
+.rectangle {
+  height: 3px;
+  width: calc(100% - 0rem);
+  background: rgba(225, 249, 244, 1);
+  border-radius: 0px;
+
+  background: #e1f9f4;
+}
+
+/* .datatable-container {
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
+  background: #ffffff;
+  border-radius: 0px;
+} */
+
+
+
+
+.heading {
+  background-color: #ffffff;
+  display: flex;
+  height: 2.5rem;
+  padding-right: 2rem;
+  border-radius: 10px;
+  padding-top: 0.5rem;
+  /* margin-left: 1.5rem; */
+
+  margin-left: 1.5rem;
+  width: 77vw;
+  justify-content: space-between;
+}
+.datatable-container {
+  /* width: calc(100% - -97rem); */
+  margin-left: 1rem;
+  margin-right: 2rem;
+  /* background: #ffffff; */
+  border-radius: 0px;
+}
+
+.rowdata {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 74vw;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+}
+
+.tabledats {
+  display: flex;
+  padding-top: 0.5rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 2.5rem;
+  background-color: #ffffff;
+  width: 77vw;
+  /* justify-content: space-between; */
+}
+
+.ppid-row {
+  width: 4.5rem;
+  margin-left: 1rem;
+}
+
+
+
+.property-row {
+  width: 4rem;
+  text-align: center;
+  margin-left: 6rem;
+}
+
+.contact-row {
+  width: 6rem;
+  text-align-last: center;
+  margin-left: 3.5rem;
+}
+
+.area-row {
+  width: 7rem;
+  margin-left: 0rem;
+  text-align: center;
+}
+
+.views-row {
+  text-align: center;
+  width: 2rem;
+  margin-left: 2.4rem;
+}
+
+.status-row {
+  width: 4rem;
+  text-align: center;
+  margin-left: 4rem;
+}
+
+.day-row {
+  margin-left: 5rem;
+  width: 2rem;
+  text-align: center;
+}
+
+
+
+.image-row {
+  margin-left: 3rem;
+}
+
+.action-row {
+  margin-left: 2rem;
+  width: 6.5rem;
+  text-align: right;
+}
+
+.ppid {
+  padding-left: 2rem;
+}
+.table-heading {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #284e91;
+}
+button.status-button {
+  color: #284e91;
+  font-family: Catamaran;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: none;
+}
