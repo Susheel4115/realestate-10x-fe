@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 //
 //
 
-const Header = ({ user }) => {
+const Header = ({ user, setToken }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
-    localStorage.clear();
+    setToken(localStorage.clear());
     navigate("/Signin");
   };
 

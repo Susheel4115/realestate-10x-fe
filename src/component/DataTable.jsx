@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import "./CSS-property/userData.css";
 import Toggle from "./Toggle";
 
-const url = "https://realestate-10x-be.herokuapp.com/property";
+const url = "https://realestate-10x-be.herokuapp.com/property/";
 
-const DataTable = ({ searchkey }) => {
+const DataTable = ({ searchkey, token }) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
 
@@ -17,7 +17,7 @@ const DataTable = ({ searchkey }) => {
     try {
       const jsonRes = await fetch(url, {
         headers: {
-          Authorization: localStorage.getItem("token"),
+          Authorization: token,
         },
       });
 

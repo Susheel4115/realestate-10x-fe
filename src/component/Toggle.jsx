@@ -14,16 +14,19 @@ const Toggle = ({ obj, getData }) => {
       // });
       const path = obj._id;
       console.log(path);
-      const response = await axios.put(
+      const response = await fetch(
         "https://realestate-10x-be.herokuapp.com/property/" + path,
-        obj,
         {
-          withCredentials: true,
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ obj }),
         }
       );
       getData();
     } catch (error) {
-      alert(error.response.data.message);
+      alert(error);
     }
   };
 

@@ -6,21 +6,24 @@ import { Link, useNavigate } from "react-router-dom";
 
 import Nav from "./Nav";
 
-const Location = ({ user, data }) => {
+const Location = ({ user, data, setToken, token }) => {
   console.log("data is here", data);
 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     navigate("/property");
-    const JsonResponse = await fetch("http://localhost:5000/property", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
-      },
-      body: JSON.stringify(data),
-    });
+    const JsonResponse = await fetch(
+      "https://realestate-10x-be.herokuapp.com/property/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(data),
+      }
+    );
     // console.log(data)
     const respose = await JsonResponse.json();
     console.log(respose);
@@ -37,7 +40,7 @@ const Location = ({ user, data }) => {
     <div className="basic">
       <SideBar />
       <div className="headform">
-        <Header user={user} />
+        <Header user={user} setToken={setToken} />
         <div className="rectangle"></div>
 
         <Nav />

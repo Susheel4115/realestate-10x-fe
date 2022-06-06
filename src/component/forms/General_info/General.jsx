@@ -4,7 +4,7 @@ import SideBar from "../../common/SideBar";
 import Header from "../../common/Header";
 import { Link, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
-const General = ({ user, data, setData }) => {
+const General = ({ user, data, setData, setToken }) => {
   const [contact, setConact] = useState("");
 
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const General = ({ user, data, setData }) => {
     <div className="basic">
       <SideBar />
       <div className="headform">
-        <Header user={user} />
+        <Header user={user} setToken={setToken} />
         <div className="rectangle"></div>
         <Nav />
         <div className="main">
@@ -36,7 +36,9 @@ const General = ({ user, data, setData }) => {
                 </select>
                 <h4>Posted by</h4>
                 <select className="input" name="cars">
-                  <option value=""disabled selected hidden>posted by</option>
+                  <option value="" disabled selected hidden>
+                    posted by
+                  </option>
                   <option value="saab">broker</option>
                   <option value="saab">owner</option>
                 </select>

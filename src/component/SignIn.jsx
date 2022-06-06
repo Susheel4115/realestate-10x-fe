@@ -3,9 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./CSS-property/SignIn.css";
 import eye from "../images/eye.png";
-import axios from "./axios-configure";
+import axios from "axios";
 
-function Signin({ setUser }) {
+console.log(process.env.REACT_APP_API);
+function Signin({ setUser, setToken }) {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -20,16 +21,14 @@ function Signin({ setUser }) {
     try {
       const res = await axios.post(
         `https://realestate-10x-be.herokuapp.com/login/`,
-        data,
-        {
-          withCredentials: true,
-        }
+        data
       );
 
       console.log(res.data);
 
       if (res.data.status === "sucess") {
         localStorage.setItem("token", res.data.token);
+        setToken(res.data.token);
         setUser({
           UserID: res.data.UserID,
           UserName: res.data.UserName,

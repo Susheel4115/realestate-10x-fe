@@ -16,6 +16,7 @@ function App() {
     UserID: localStorage.getItem("UserID"),
     UserName: localStorage.getItem("UserName"),
   });
+  const [token, setToken] = useState(localStorage.getItem("token"));
   const [data, setData] = useState({
     PPID: "NA",
     Property: "NA",
@@ -28,28 +29,62 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<Signin setUser={setUser} />} />
+        <Route
+          path="/*"
+          element={<Signin setUser={setUser} setToken={setToken} />}
+        />
         {/* login page */}
-        <Route path="/SignUp" element={<Signup />} />
+        <Route path="/SignUp" setToken={setToken} element={<Signup />} />
         {/* registration page */}
-        <Route path="/Property" element={<Property user={user} />} />
+        <Route
+          path="/Property"
+          element={<Property user={user} setToken={setToken} token={token} />}
+        />
         {/* property page */}
 
         <Route
           path="/Basic"
-          element={<Basic user={user} data={data} setData={setData} />}
+          element={
+            <Basic
+              user={user}
+              setToken={setToken}
+              data={data}
+              setData={setData}
+            />
+          }
         />
         <Route
           path="/PropertyDetails"
-          element={<Propertypage user={user} data={data} setData={setData} />}
+          element={
+            <Propertypage
+              user={user}
+              setToken={setToken}
+              data={data}
+              setData={setData}
+            />
+          }
         />
         <Route
           path="/General"
-          element={<General user={user} data={data} setData={setData} />}
+          element={
+            <General
+              user={user}
+              setToken={setToken}
+              data={data}
+              setData={setData}
+            />
+          }
         />
         <Route
           path="/location"
-          element={<Location user={user} data={data} />}
+          element={
+            <Location
+              user={user}
+              setToken={setToken}
+              data={data}
+              token={token}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

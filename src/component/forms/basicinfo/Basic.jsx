@@ -5,7 +5,7 @@ import SideBar from "../../common/SideBar";
 import { Link, useNavigate } from "react-router-dom";
 
 import Nav from "../../common/Nav";
-const Basic = ({ user, data, setData }) => {
+const Basic = ({ user, data, setData, setToken }) => {
   const [loan, setLoan] = useState("");
   const [Price, setPrice] = useState("");
   const [Type, setType] = useState("");
@@ -48,7 +48,7 @@ const Basic = ({ user, data, setData }) => {
     <div className="basic">
       <SideBar />
       <div className="headform">
-        <Header user={user} />
+        <Header user={user} setToken={setToken} />
         <div className="rectangle"></div>
         <Nav />
         <div className="main">
@@ -65,7 +65,9 @@ const Basic = ({ user, data, setData }) => {
                   value={Type}
                   onChange={(e) => setType(e.target.value)}
                 >
-                  <option value=""disabled selected hidden>Select Property type</option>
+                  <option value="" disabled selected hidden>
+                    Select Property type
+                  </option>
                   <option value="Flat">Flat</option>
                   <option value="House">House</option>
                   <option value="Plot">Plot</option>

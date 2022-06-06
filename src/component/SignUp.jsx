@@ -24,11 +24,8 @@ function Signup() {
     console.log(data);
     try {
       const res = await axios.post(
-        `https://realestate-10x-be.herokuapp.com/Signup`,
-        data,
-        {
-          withCredentials: true,
-        }
+        `https://realestate-10x-be.herokuapp.com/Signup/`,
+        data
       );
       console.log(res);
       navigate("/Signin");
